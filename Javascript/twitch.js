@@ -1,3 +1,4 @@
+(await import("dotenv")).config();
 async function getOAuthToken(clientId, clientSecret) {
   const response = await fetch(`https://id.twitch.tv/oauth2/token`, {
     method: "POST",
@@ -63,8 +64,8 @@ function getYearDateRange(year) {
 }
 
 async function main(year) {
-  const clientId = "31fa6c13njarqe9m0odilieni2i0rq";
-  const clientSecret = "lz4anu2bfn2wjwekc6a0xpy9gsqxqn";
+  const clientId = process.env.TWITCH_CLIENT_ID
+  const clientSecret = process.env.TWITCH_CLIENT_SECRET
 
   //   const year = 2023;
 
