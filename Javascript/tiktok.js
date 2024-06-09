@@ -1,13 +1,12 @@
-const client_id = "aw66v6d7gvp6hs8k";
-const client_secret = "wHZUuAduRVAoREpqzWRTsmNb1xpQoLCS";
+(await import("dotenv")).config();
 const grant_type = "client_credentials";
 
 async function getToken() {
   const url = "https://open.tiktokapis.com/v2/oauth/token/";
 
   const params = new URLSearchParams();
-  params.append("client_key", "aw66v6d7gvp6hs8k");
-  params.append("client_secret", "wHZUuAduRVAoREpqzWRTsmNb1xpQoLCS");
+  params.append("client_key", process.env.TIKTOK_CLIENT_ID);
+  params.append("client_secret", process.env.TIKTOK_CLIENT_SECRET);
   params.append("grant_type", "client_credentials");
 
   const request = await fetch(url, {
