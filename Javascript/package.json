@@ -1,0 +1,21 @@
+{
+  "name": "pcproject",
+  "version": "0.0.1",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "dev": "node main.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "type": "module",
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.6.8",
+    "dotenv": "^16.4.5",
+    "json2csv": "^6.0.0-alpha.2",
+    "qs": "^6.12.1",
+    "twit": "^2.2.11",
+    "twitter-api-v2": "^1.16.4"
+  }
+}
